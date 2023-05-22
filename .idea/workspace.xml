@@ -1,14 +1,53 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
   <component name="ChangeListManager">
-    <list default="true" id="581dcd6b-0544-438a-8e13-313d4debcf28" name="Changes" comment="" />
+    <list default="true" id="581dcd6b-0544-438a-8e13-313d4debcf28" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/../.gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../.idea/workspace.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/UI/LoginPage.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Energy.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../src/Main.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../src/Physics.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../.idea/misc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../.idea/vcs.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/UI/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/UI/Main.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/UI/WelcomePage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/UI/WelcomePage.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../abu" beforeDir="false" afterPath="$PROJECT_DIR$/../abu" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../gui group/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../gui group/.idea/vcs.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../gui group/Energy.java" beforeDir="false" afterPath="$PROJECT_DIR$/../gui group/Energy.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../gui group/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/../gui group/Main.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../gui group/Physic.java" beforeDir="false" afterPath="$PROJECT_DIR$/../gui group/Physic.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../gui group/PhysicsUI.java" beforeDir="false" afterPath="$PROJECT_DIR$/../gui group/PhysicsUI.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../gui group/out/production/gui group/UI/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../gui group/out/production/gui group/UI/.idea/vcs.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../gui group/out/production/gui group/UI/Energy.class" beforeDir="false" afterPath="$PROJECT_DIR$/../gui group/out/production/gui group/UI/Energy.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../gui group/out/production/gui group/UI/Main.class" beforeDir="false" afterPath="$PROJECT_DIR$/../gui group/out/production/gui group/UI/Main.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../gui group/out/production/gui group/UI/Physic.class" beforeDir="false" afterPath="$PROJECT_DIR$/../gui group/out/production/gui group/UI/Physic.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../gui group/out/production/gui group/UI/PhysicsUI$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/../gui group/out/production/gui group/UI/PhysicsUI$1.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../gui group/out/production/gui group/UI/PhysicsUI$2.class" beforeDir="false" afterPath="$PROJECT_DIR$/../gui group/out/production/gui group/UI/PhysicsUI$2.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../gui group/out/production/gui group/UI/PhysicsUI.class" beforeDir="false" afterPath="$PROJECT_DIR$/../gui group/out/production/gui group/UI/PhysicsUI.class" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Class" />
+      </list>
+    </option>
+  </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="MarkdownSettingsMigration">
+    <option name="stateVersion" value="1" />
   </component>
   <component name="ProjectId" id="2Q9JumZ5x4IDU64yYJIQ6aNMSaw" />
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
@@ -16,13 +55,13 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "onboarding.tips.debug.path": "C:/Users/user.DESKTOP-7KDPKJN/IdeaProjects/Bank_Gui/src/Main.java"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;onboarding.tips.debug.path&quot;: &quot;C:/Users/user.DESKTOP-7KDPKJN/IdeaProjects/Bank_Gui/src/Main.java&quot;
   }
-}]]></component>
+}</component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
@@ -33,16 +72,5 @@
       <updated>1684760088961</updated>
     </task>
     <servers />
-  </component>
-  <component name="XDebuggerManager">
-    <breakpoint-manager>
-      <breakpoints>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/Main.java</url>
-          <line>13</line>
-          <option name="timeStamp" value="1" />
-        </line-breakpoint>
-      </breakpoints>
-    </breakpoint-manager>
   </component>
 </project>
