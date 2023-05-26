@@ -4,7 +4,7 @@ public class BankCurrentPage {
     private double balance;
 
     public BankCurrentPage() {
-        balance = 0.0;
+        balance = 10000;
     }
 
     public void deposit(double amount) {
@@ -36,7 +36,7 @@ public class BankCurrentPage {
             int choice = scanner.nextInt();
 
             switch (choice) {
-                case 1:
+git                case 1:
                     System.out.print("Enter the amount to deposit: ");
                     double depositAmount = scanner.nextDouble();
                     bank.deposit(depositAmount);
