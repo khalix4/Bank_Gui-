@@ -1,9 +1,11 @@
+package UI;
+
 import java.util.Scanner;
 
-public class BankCurrentPage {
+public class SavingsAccount {
     private double balance;
 
-    public BankCurrentPage() {
+    public SavingsAccount() {
         balance = 10000;
     }
 
@@ -25,7 +27,7 @@ public class BankCurrentPage {
 
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
-        BankCurrentPage bank = new BankCurrentPage();
+        SavingsAccount bank = new SavingsAccount();
 
         while (true) {
             System.out.println("1. Deposit");
@@ -36,7 +38,7 @@ public class BankCurrentPage {
             int choice = scanner.nextInt();
 
             switch (choice) {
-git                case 1:
+                case 1:
                     System.out.print("Enter the amount to deposit: ");
                     double depositAmount = scanner.nextDouble();
                     bank.deposit(depositAmount);
