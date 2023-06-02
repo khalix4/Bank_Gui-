@@ -4,7 +4,7 @@ public class CurrentAccount {
     private double balance;
 
     public CurrentAccount() {
-        balance = 10000;
+        balance = 20000;
     }
 
     public void deposit(double amount) {
@@ -15,7 +15,7 @@ public class CurrentAccount {
         if (amount <= balance) {
             balance -= amount;
         } else {
-            System.out.println("Insufficient funds!");
+            System.out.println("Insufficient balance!");
         }
     }
 
@@ -37,17 +37,17 @@ public class CurrentAccount {
 
             switch (choice) {
                 case 1:
-                    System.out.print("Enter the amount to deposit: ");
+                    System.out.print("Enter the amount to be deposited: ");
                     double depositAmount = scanner.nextDouble();
                     bank.deposit(depositAmount);
-                    System.out.println("Amount deposited successfully.");
+                    System.out.println("Deposited successfully.");
                     break;
 
                 case 2:
-                    System.out.print("Enter the amount to withdraw: ");
+                    System.out.print("Enter the amount for withdrawal: ");
                     double withdrawAmount = scanner.nextDouble();
                     bank.withdraw(withdrawAmount);
-                    System.out.println("Amount withdrawn successfully.");
+                    System.out.println("Withdrawal successfully.");
                     break;
 
                 case 3:
@@ -55,12 +55,12 @@ public class CurrentAccount {
                     break;
 
                 case 4:
-                    System.out.println("Thank you for using our bank. Goodbye!");
+                    System.out.println("Thank you for accepting our service. Goodbye!");
                     System.exit(0);
                     break;
 
                 default:
-                    System.out.println("Invalid choice. Please try again.");
+                    System.out.println("Invalid action. Please try again.");
             }
 
             System.out.println();
