@@ -14,18 +14,16 @@ public class LoginPage extends JFrame {
         setSize(400, 300);
         setLocationRelativeTo(null);
         setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-
         initComponents();
         setVisible(true);
     }
 
     private void initComponents() {
         JPanel panel = new JPanel();
-        panel.setLayout(new GridLayout(3, 1));
+        panel.setLayout(new GridLayout(3, 2, 10, 10));
 
-        JLabel titleLabel = new JLabel("Login");
-        titleLabel.setFont(new Font("Arial",Font.CENTER_BASELINE, 24));
-        titleLabel.setHorizontalAlignment(SwingConstants.CENTER);
+        JLabel titleLabel = new JLabel("Login", SwingConstants.CENTER);
+        titleLabel.setFont(new Font("Arial", Font.BOLD, 24));
 
         JLabel usernameLabel = new JLabel("Username:");
         usernameField = new JTextField();
@@ -37,27 +35,33 @@ public class LoginPage extends JFrame {
         loginButton.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
+                // Perform login validation here
                 String username = usernameField.getText();
-                String password = new String(passwordField.getPassword());
-                if (username.equals("admin") && password.equals("5555")) {
-                    JOptionPane.showMessageDialog(LoginPage.this, "Login successful!");
+                String password = String.valueOf(passwordField.getPassword());
+
+                if (username.equals("admin") && password.equals("password")) {
+                    JOptionPane.showMessageDialog(null, "Login successful!");
                 } else {
-                    JOptionPane.showMessageDialog(LoginPage.this, "Invalid username or password.", "Error", JOptionPane.ERROR_MESSAGE);
+                    JOptionPane.showMessageDialog(null, "Invalid username or password", "Error", JOptionPane.ERROR_MESSAGE);
                 }
             }
         });
 
         panel.add(titleLabel);
+        panel.add(new JLabel()); // empty label for spacing
         panel.add(usernameLabel);
         panel.add(usernameField);
         panel.add(passwordLabel);
         panel.add(passwordField);
-        panel.add(loginButton);
 
-        add(panel);
+        JPanel buttonPanel = new JPanel(new FlowLayout(FlowLayout.CENTER));
+        buttonPanel.add(loginButton);
+
+        getContentPane().add(panel, BorderLayout.CENTER);
+        getContentPane().add(buttonPanel, BorderLayout.SOUTH);
     }
 
     public static void main(String[] args) {
-        SwingUtilities.invokeLater(() -> new LoginPage());
+        SwingUtilities.invokeLater(LoginPage::new);
     }
 }

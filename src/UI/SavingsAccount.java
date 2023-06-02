@@ -1,8 +1,15 @@
 package UI;
+import java.awt.BorderLayout;
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
 
-import java.util.Scanner;
+import javax.swing.JButton;
+import javax.swing.JFrame;
+import javax.swing.JLabel;
+import javax.swing.JPanel;
+import javax.swing.JTextField;
 
-public class SavingsAccount {
+class SavingsAccount {
     private double balance;
 
     public SavingsAccount() {
@@ -25,47 +32,68 @@ public class SavingsAccount {
         System.out.println("Current balance: " + balance);
     }
 
-    public static void main(String[] args) {
-        Scanner scanner = new Scanner(System.in);
-        SavingsAccount bank = new SavingsAccount();
+    public double getBalance() {
+        return balance;
+    }
+}
 
-        while (true) {
-            System.out.println("1. Deposit");
-            System.out.println("2. Withdraw");
-            System.out.println("3. Display Balance");
-            System.out.println("4. Exit");
-            System.out.print("Enter your choice: ");
-            int choice = scanner.nextInt();
+class SavingsAccountFrame extends JFrame implements ActionListener {
+    private JLabel balanceLabel;
+    private JTextField amountField;
+    private JButton depositButton;
+    private JButton withdrawButton;
+    private JButton displayButton;
+    private SavingsAccount bank;
 
-            switch (choice) {
-                case 1:
-                    System.out.print("Enter the amount to deposit: ");
-                    double depositAmount = scanner.nextDouble();
-                    bank.deposit(depositAmount);
-                    System.out.println("Amount deposited successfully.");
-                    break;
+    public SavingsAccountFrame() {
+        bank = new SavingsAccount();
 
-                case 2:
-                    System.out.print("Enter the amount to withdraw: ");
-                    double withdrawAmount = scanner.nextDouble();
-                    bank.withdraw(withdrawAmount);
-                    System.out.println("Amount withdrawn successfully.");
-                    break;
+        balanceLabel = new JLabel("Current balance: " + bank.getBalance());
 
-                case 3:
-                    bank.displayBalance();
-                    break;
+        amountField = new JTextField(10);
 
-                case 4:
-                    System.out.println("Thank you for using our bank. Goodbye!");
-                    System.exit(0);
-                    break;
+        depositButton = new JButton("Deposit");
+        depositButton.addActionListener(this);
 
-                default:
-                    System.out.println("Invalid choice. Please try again.");
-            }
+        withdrawButton = new JButton("Withdraw");
+        withdrawButton.addActionListener(this);
 
-            System.out.println();
+        displayButton = new JButton("Display Balance");
+        displayButton.addActionListener(this);
+
+        JPanel panel = new JPanel();
+        panel.add(balanceLabel);
+        panel.add(new JLabel("Amount: "));
+        panel.add(amountField);
+        panel.add(depositButton);
+        panel.add(withdrawButton);
+        panel.add(displayButton);
+
+        getContentPane().add(panel, BorderLayout.CENTER);
+
+        setTitle("Savings Account");
+        setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+        pack();
+        setVisible(true);
+    }
+
+    public void actionPerformed(ActionEvent e) {
+        if (e.getSource() == depositButton) {
+            double amount = Double.parseDouble(amountField.getText());
+            bank.deposit(amount);
+            balanceLabel.setText("Current balance: " + bank.getBalance());
+            amountField.setText("");
+        } else if (e.getSource() == withdrawButton) {
+            double amount = Double.parseDouble(amountField.getText());
+            bank.withdraw(amount);
+            balanceLabel.setText("Current balance: " + bank.getBalance());
+            amountField.setText("");
+        } else if (e.getSource() == displayButton) {
+            balanceLabel.setText("Current balance: " + bank.getBalance());
         }
+    }
+
+    public static void main(String[] args) {
+        new SavingsAccountFrame();
     }
 }
