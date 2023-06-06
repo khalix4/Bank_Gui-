@@ -41,6 +41,8 @@ public class LoginPage extends JFrame {
 
                 if (username.equals("admin") && password.equals("password")) {
                     JOptionPane.showMessageDialog(null, "Login successful!");
+                    Bank_Gui bankGui = new Bank_Gui();
+                    bankGui.mainUI();
                 } else {
                     JOptionPane.showMessageDialog(null, "Invalid username or password", "Error", JOptionPane.ERROR_MESSAGE);
                 }
