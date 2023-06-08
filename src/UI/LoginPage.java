@@ -4,10 +4,11 @@ import javax.swing.*;
 import java.awt.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
+//  Lopgin page
 
 public class LoginPage extends JFrame {
-    private JTextField usernameField;
-    private JPasswordField passwordField;
+    public JTextField usernameField;
+    public JPasswordField passwordField;
 
     public LoginPage() {
         setTitle("Login Page");
@@ -18,7 +19,7 @@ public class LoginPage extends JFrame {
         setVisible(true);
     }
 
-    private void initComponents() {
+    public void initComponents() {
         JPanel panel = new JPanel();
         panel.setLayout(new GridLayout(3, 2, 10, 10));
 
@@ -36,6 +37,7 @@ public class LoginPage extends JFrame {
             @Override
             public void actionPerformed(ActionEvent e) {
                 // Perform login validation here
+                
                 String username = usernameField.getText();
                 String password = String.valueOf(passwordField.getPassword());
 
