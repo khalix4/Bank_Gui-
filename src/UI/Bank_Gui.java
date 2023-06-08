@@ -6,7 +6,7 @@ import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 
 public class Bank_Gui extends JFrame{
-
+    //Declare the Frame and Button
     JFrame bankFrame = new JFrame("Hello");
     JLabel bankLabel = new JLabel("Welcome to Curry Bank");
     JTextArea bankArea = new JTextArea("Dear Customer which account do you want to use");
@@ -16,15 +16,15 @@ public class Bank_Gui extends JFrame{
 
     JFrame CurrentAccount = new JFrame("Welcome to your Current Please Make your Transaction");
 
-    JButton Currentaccount = new JButton("Withdrawl");
+    JButton Currentaccount = new JButton("Withdrawal");
 
     JButton getCurrentaccount = new JButton("Deposit");
 
     JTextArea CurrentAmount = new JTextArea("Amount");
-    JTextField CurrentPin = new JTextField("Insert Pin");
-    JFrame SavingsAccount = new JFrame("Welcome to your Savings Please Make your Transaction");
-    JButton Savingsaccount = new JButton("Withdrawl");
-    JButton getSavingsaccount = new JButton("Deposit");
+    JTextField CurrentPin = new JTextField("Insert your Pin");
+    JFrame SavingsAccount = new JFrame("Welcome to your Savings Account Please Make your Transaction");
+    JButton SavingsaccountWithdraw = new JButton("Withdrawal");
+    JButton SavingsaccountDeposit = new JButton("Deposit");
     JTextArea SavingsAmount = new JTextArea( "Amount");
     JTextField SavingsPin = new JTextField("Insert PIn");
 
@@ -43,22 +43,27 @@ public class Bank_Gui extends JFrame{
 
 
     public void mainUI(){
+        //Main user interface
+        
         bankFrame.add(bankArea);
         bankFrame.add(bankLabel);
         bankFrame.add(bankButton);
         bankFrame.add(bankButton2);
+    //Current account interface
+        
+        CurrentAccount.add(CurrentaccountWithdraw);
+        CurrentAccount.add(CurrentaccountDeposit);
+        CurrentAccount.add(CurrentAmount);
+        CurrentAccount.add(CurrentPin);
 
-        CurrentAccount.add(Currentaccount);
-        CurrentAccount.add(getCurrentaccount);
-        // CurrentAccount.add(CurrentAmount);
-        //CurrentAccount.add(CurrentPin);
-
-
-        SavingsAccount.add(getSavingsaccount);
-        //  SavingsAccount.add(SavingsAmount);
-        SavingsAccount.add(Savingsaccount);
-        //SavingsAccount.add(SavingsPin);
-
+    //savings account interface
+        
+        SavingsAccount.add(SavingsaccountWithdraw);
+        SavingsAccount.add(SavingsAmount);
+        SavingsAccount.add(SavingsaccountDeposit);
+        SavingsAccount.add(SavingsPin);
+    // Bankframe
+        
         bankFrame.setSize(200,300);
         bankFrame.setLayout(new FlowLayout(FlowLayout.TRAILING));
         bankFrame.setBackground(Color.BLUE);
@@ -77,39 +82,50 @@ public class Bank_Gui extends JFrame{
         Savingsaccount3.add(Savingsaccount4);
 
 
-        ;
 
+        // main Button setting
+        
         bankButton.addActionListener(e -> {
 
             CurrentAccount.setSize(200, 300);
             CurrentAccount.setLayout(new FlowLayout(FlowLayout.CENTER));
             CurrentAccount.setVisible(true);
         });
+        //second bank button
+        
         bankButton2.addActionListener(e -> {
             SavingsAccount.setSize(200,300);
             SavingsAccount.setLayout(new FlowLayout(FlowLayout.CENTER));
             SavingsAccount.setVisible(true);
         });
-        Currentaccount.addActionListener(e -> {
+        //current account withdraw button
+        
+        CurrentaccountWithdraw.addActionListener(e -> {
             Currentaccount1.setLayout(new FlowLayout(FlowLayout.CENTER));
             Currentaccount1.setSize(200, 300);
             Currentaccount1.setVisible(true);
-
+    
+            // savings account deposit button
+            
 
         });
-        Savingsaccount.addActionListener(e -> {
+        SavingsaccountDeposit.addActionListener(e -> {
             Savingsaccount1.setSize(200, 300);
             Savingsaccount1.setLayout(new FlowLayout(FlowLayout.CENTER));
             Savingsaccount1.setVisible(true);
 
-
+    //Current account deposit button
+            
         });
-        getCurrentaccount.addActionListener(e ->{
+        CurrentaccountDeposit.addActionListener(e ->{
             Currentaccount3.setSize(200, 300);
             Currentaccount3.setLayout(new FlowLayout(FlowLayout.CENTER));
             Currentaccount3.setVisible(true);
         });
-        getSavingsaccount.addActionListener(e ->{
+        
+            //savings account  withdraw button
+        
+        SavingsaccountWithdraw.addActionListener(e ->{
             Savingsaccount3.setSize(200, 300);
             Savingsaccount3.setLayout(new FlowLayout(FlowLayout.CENTER));
             Savingsaccount3.setVisible(true);
