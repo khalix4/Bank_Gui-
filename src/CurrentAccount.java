@@ -1,24 +1,28 @@
 import java.util.Scanner;
+// This is the current account
 
 public class CurrentAccount {
     private double balance;
 
     public CurrentAccount() {
-        balance = 20000;
+        balance = 100000;
     }
 
+    // This is for the deposit
     public void deposit(double amount) {
         balance += amount;
     }
 
+   // This is for the withdrawal
     public void withdraw(double amount) {
         if (amount <= balance) {
             balance -= amount;
         } else {
-            System.out.println("Insufficient balance!");
+            System.out.println("Insufficient Funds!");
         }
     }
-
+    // Shows how much you have left
+    
     public void displayBalance() {
         System.out.println("Current balance: " + balance);
     }
@@ -38,16 +42,16 @@ public class CurrentAccount {
             switch (choice) {
                 case 1:
                     System.out.print("Enter the amount to be deposited: ");
-                    double depositAmount = scanner.nextDouble();
+                    int depositAmount = scanner.nextInt();
                     bank.deposit(depositAmount);
                     System.out.println("Deposited successfully.");
                     break;
 
                 case 2:
                     System.out.print("Enter the amount for withdrawal: ");
-                    double withdrawAmount = scanner.nextDouble();
+                    int withdrawAmount = scanner.nextInt();
                     bank.withdraw(withdrawAmount);
-                    System.out.println("Withdrawal successfully.");
+                    System.out.println("Withdrawn successfully.");
                     break;
 
                 case 3:
