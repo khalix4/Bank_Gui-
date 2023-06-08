@@ -8,18 +8,21 @@ import javax.swing.JFrame;
 import javax.swing.JLabel;
 import javax.swing.JPanel;
 import javax.swing.JTextField;
+// savings account
 
 class SavingsAccount {
-    private double balance;
+    public int balance;
 
     public SavingsAccount() {
         balance = 10000;
     }
-
+// deposit function
+    
     public void deposit(double amount) {
         balance += amount;
     }
-
+// withdraw function 
+    
     public void withdraw(double amount) {
         if (amount <= balance) {
             balance -= amount;
@@ -27,23 +30,26 @@ class SavingsAccount {
             System.out.println("Insufficient funds!");
         }
     }
-
+// show amount button
+    
     public void displayBalance() {
         System.out.println("Current balance: " + balance);
     }
 
-    public double getBalance() {
+    public int getBalance() {
         return balance;
     }
 }
 
 class SavingsAccountFrame extends JFrame implements ActionListener {
-    private JLabel balanceLabel;
-    private JTextField amountField;
-    private JButton depositButton;
-    private JButton withdrawButton;
-    private JButton displayButton;
-    private SavingsAccount bank;
+     // savings frame
+    public JLabel balanceLabel;
+   
+    public JTextField amountField;
+    public JButton depositButton;
+    public JButton withdrawButton;
+    public JButton displayButton;
+    public SavingsAccount bank;
 
     public SavingsAccountFrame() {
         bank = new SavingsAccount();
@@ -60,7 +66,8 @@ class SavingsAccountFrame extends JFrame implements ActionListener {
 
         displayButton = new JButton("Display Balance");
         displayButton.addActionListener(this);
-
+//placing the buttons
+        
         JPanel panel = new JPanel();
         panel.add(balanceLabel);
         panel.add(new JLabel("Amount: "));
@@ -76,7 +83,8 @@ class SavingsAccountFrame extends JFrame implements ActionListener {
         pack();
         setVisible(true);
     }
-
+// function for the buttons
+    
     public void actionPerformed(ActionEvent e) {
         if (e.getSource() == depositButton) {
             double amount = Double.parseDouble(amountField.getText());
